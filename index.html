@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="reset.css">
+
+    <style>
+        .game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 15px;
+        }
+        .board {
+            display: grid;
+            gap: 1px;
+            margin: 0 auto;
+        }
+        .board__cell {
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+        }
+        .info {
+            text-align: center;
+            font-size: 2vw;
+        }
+        .modal {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="game-container">
+    <div class="info">
+        <div class="info__score"></div>
+        <div class="info__turn"></div>
+    </div>
+    <div class="board"></div>
+</div>
+
+<div class="modal">
+    <div class="modal-content">
+        <p>Game options: </p>
+        <div class="button-container">
+            <button onclick="restartGame()" id="restartBtn">Restart</button>
+            <button onclick="continueGame()" id="continueBtn">Continue</button>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>
